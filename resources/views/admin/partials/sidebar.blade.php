@@ -28,7 +28,7 @@
     <div class="sidebar-content">
     <ul class="nav nav-secondary">
         <li class="nav-item active">
-        <a href="/" class="collapsed" aria-expanded="false"><i class="fas fa-home"></i><p>Dashboard</p></a>
+        <a href="/admin" class="collapsed" aria-expanded="false"><i class="fas fa-home"></i><p>Dashboard</p></a>
         </li>
         <li class="nav-section">
         <span class="sidebar-mini-icon">
@@ -47,6 +47,12 @@
         </li>
          <li class="nav-item">
             <a  href="/inactivecust"> <i class="fab fa-odnoklassniki"></i> <p>Inactive Customers</p></a>
+        </li>
+        <li class="nav-section">
+          <h4 class="text-section">Content</h4>
+        </li>
+        <li class="nav-item">
+            <a  href="{{ route('admin.gallery.index') }}"> <i class="fas fa-images"></i> <p>Gallery</p></a>
         </li>
     </ul>
     </div>
