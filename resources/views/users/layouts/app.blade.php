@@ -26,6 +26,9 @@
   <!-- Main CSS File -->
   <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
   <style>
+    .review-card { border: 1px solid rgba(0,0,0,.05); transition: transform .2s ease, box-shadow .2s ease; }
+    .review-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0,0,0,.08); }
+  
     /* Common styles for both buttons */
 .scroll-top,
 .whatsapp-btn {

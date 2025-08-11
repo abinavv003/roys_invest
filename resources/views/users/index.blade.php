@@ -136,6 +136,39 @@
 
 </section><!-- End Services Section -->
 
+<!-- Testimonials Section -->
+<section id="testimonials" class="section light-background">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Testimonials</h2>
+    <p>What our clients say about us</p>
+  </div>
+  <div class="container">
+    <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
+      @forelse(($reviews ?? []) as $review)
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm review-card">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <h6 class="mb-0 fw-semibold">{{ $review['author_name'] }}</h6>
+                <div class="text-warning" aria-label="{{ $review['rating'] }} out of 5 stars">
+                  @for ($i = 1; $i <= 5; $i++)
+                    <i class="bi bi-star{{ $i <= $review['rating'] ? '-fill' : '' }}"></i>
+                  @endfor
+                </div>
+              </div>
+              <small class="text-muted mb-2">{{ $review['date'] }}</small>
+              <p class="mb-0 flex-grow-1">{{ $review['text'] }}</p>
+            </div>
+          </div>
+        </div>
+      @empty
+        <div class="col-12 text-center text-muted">Testimonials will appear here once available.</div>
+      @endforelse
+    </div>
+  </div>
+</section>
+<!-- End Testimonials Section -->
+
 <!-- Call To Action Section -->
 <section id="call-to-action" class="call-to-action section dark-background">
 
